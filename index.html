@@ -9,56 +9,80 @@
     </head>
 
     <body>
-        <div id="page-wrapper">
 
-            <!-- Header -->
-            <header id="header">
-                <h1> <a href="index.html">JM</a></h1>
-                <nav>
-                    <a href="#about">About Me</a>
-                    <a href="#project">Projects</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </header>
+        
+            
+        <!-- Header -->
+        <header id="header">
+            <nav class="navbar">
+                <a class="nav-link" href="#project">My Projects</a>
+                <a class="navbar-brand" href="index.html"> <img id="header-logo" src="images/JM-whtLogo.png" alt="Home" /> </a>
+                <a class="nav-link" href="#about">About Me</a>
+            </nav>
+        </header>
+
+        <div id="page-wrapper">
 
             <!--Banner-->
             <section id="banner">
                 <div class="inner">
                     <div class="initial"> <span class="icon fa-gem"> </span> </div>
-                    <h2>This is Solid State</h2>
-                    <p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+                    <h2>Jospin Mihigo</h2>
+                    <p>Software Engineer building ...</p>
                 </div>
             </section>
 
         
-
             <!--Projects-->
-            <section id="one" class="wrapper spotlight style1">
-                <div class="inner">
-                    <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-                    <div class="content">
-                        <h2 class="major">Magna arcu feugiat</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" class="special">Learn more</a>
+            <section id="carousel" >
+                <div class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/MRIT-projLogo.png" class="d-block w-100" alt="project logo">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/toolsProj.jpg" class="d-block w-100" alt="tool">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/booksProj.jpg" class="d-block w-100" alt="books">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </section>
-
-            <section id="two" class="wrapper alt spotlight style2">
-                <div class="inner">
-                    <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-                    <div class="content">
-                        <h2 class="major">Tempus adipiscing</h2>
-                        <p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-                        <a href="#" class="special">Learn more</a>
-                    </div>
-                </div>
-            </section>
-
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
+
     </body>
 
 

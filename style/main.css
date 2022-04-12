@@ -1,17 +1,75 @@
-/* Header 
+:root {
+    --cHeader: rgba(74, 86, 153) ;
+}
+
+/* Header */
 
 #header {
-    transition: background-color 0.2s ease-in-out;
-    background-color: rgba(53, 56, 73, 0.95);
-    color: azure;
-    height: 300px;
+    background-color: var(--cHeader);
+    height: 60px;
     left: 0;
-    line-height: 10%;
-    padding: 2px 5px;
+    padding: 10px;
     position: fixed;
     top: 0;
     width: 100%;
-}/*
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#header-logo {
+    width: 60px;
+    height: 40px;
+    padding: 5px;
+    border:  solid 3px;
+}
+
+#header a {
+    margin: 7px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+/* page wapper */
+
+#page-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    flex-direction: column;
+    top: 60px;
+    color: rgb(201, 200, 200);
+}
+
+/* Banner */
+
+#banner {
+    padding: 45px 0 60px 0;
+    background-image: linear-gradient(to top, rgba(20, 28, 66, 0.8), var(--cHeader));
+    background-size: auto, cover;
+    background-position: center, center;
+}
+
+/* Carousel */
+
+#carousel {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 57, 117);
+    height: 20vh;
+}
+
+#carousel img {
+    width: 5vw;
+    height: 175px;
+}
 
 
                
