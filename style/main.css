@@ -1,5 +1,5 @@
 :root {
-    --cHeader: rgba(74, 86, 153) ;
+    --cHeader: rgb(44, 52, 95) ;
 }
 
 /* Header */
@@ -45,31 +45,51 @@
     justify-content: space-evenly;
     flex-direction: column;
     top: 60px;
-    color: rgb(201, 200, 200);
+    color: rgb(255, 255, 255);
 }
 
 /* Banner */
 
 #banner {
-    padding: 45px 0 60px 0;
-    background-image: linear-gradient(to top, rgba(20, 28, 66, 0.8), var(--cHeader));
-    background-size: auto, cover;
-    background-position: center, center;
+    padding: 10vh 0 10vh 2vw;
+    background-image: linear-gradient(to top, rgba(69, 86, 133), var(--cHeader));
 }
 
 /* Carousel */
 
 #carousel {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgb(35, 57, 117);
-    height: 20vh;
+    background-color: rgb(69, 86, 133);
+    padding-bottom: 5px;
 }
 
-#carousel img {
-    width: 5vw;
-    height: 175px;
+.carousel-item {
+    position: relative;
+    height: 50vh;
+    min-height: 200px;
+    width: 50vw;
 }
+
+.carousel-item img {
+    border-radius: 5%;
+    max-height: 50vh;
+}
+
+.carousel-item::before {
+    content: "";
+    display: block;
+    background-color: #000;
+    opacity: .6;
+}
+
+/* Footer */
+#footer {
+    padding: 2vh;
+    color: white;
+    background-color: rgb(47, 47, 65);
+}
+
 
 
                
