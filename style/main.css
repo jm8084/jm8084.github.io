@@ -7,8 +7,6 @@
 #header {
     background-color: var(--cHeader);
     height: 60px;
-    left: 0;
-    padding: 10px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -16,6 +14,12 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
 }
 
 #header-logo {
@@ -31,10 +35,14 @@
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-#header nav {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 20px;
+.nav-link:hover {
+    text-shadow: 3px 2px 12px rgba(255, 255, 255, 0.743);
+    background-color: var(--cHeader);
+    border-radius: 10%;
+    padding-top: 10%;
+    border-bottom: solid 2px;
+    transition: text-shadow .25s;
+    transition: padding-top .4s;
 }
 
 /* page wapper */
@@ -52,38 +60,60 @@
 
 #banner {
     padding: 10vh 0 10vh 2vw;
-    background-image: linear-gradient(to top, rgba(69, 86, 133), var(--cHeader));
-}
-
-/* Carousel */
-
-#carousel {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(69, 86, 133);
-    padding-bottom: 5px;
-}
-
-.carousel-item {
-    position: relative;
     height: 50vh;
-    min-height: 200px;
-    width: 50vw;
+    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
 }
 
-.carousel-item img {
-    border-radius: 5%;
-    max-height: 50vh;
+/* Projects */
+
+#projects {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(69, 86, 133), rgb(35, 42, 61));
+
 }
 
-.carousel-item::before {
-    content: "";
-    display: block;
-    background-color: #000;
-    opacity: .6;
+.project {
+    position:relative;
+    display: flex;
+    width: 75vw;
+    min-height: 30vh;
+    margin: 10px 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.054);
+}
+
+.projImage {
+    margin: 2.5%;
+}
+
+#proj1, #proj3 {
+    right: 12.5vw;
+}
+
+#proj2 {
+    left: 12vw;
+}
+
+/* Languages */
+
+#langs {
+    padding: 350px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(35, 42, 61), rgb(56, 56, 86)); 
 }
 
 /* Footer */
+
 #footer {
     padding: 2vh;
     color: white;
