@@ -66,37 +66,79 @@
 
 /* Projects */
 
-#projects {
+#projectContainer {
     display:flex;
     flex-direction: column;
     width: 100%;
     min-height: 90vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(69, 86, 133), rgb(35, 42, 61));
+    background-image: linear-gradient(to bottom, rgba(69, 86, 133), rgb(37, 48, 78));
 
 }
 
 .project {
     position:relative;
-    display: flex;
     width: 75vw;
-    min-height: 30vh;
+    min-height: 25vh;
+    max-width: 800px;
     margin: 10px 0;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.054);
+    border: none;
+    color: white;
+    background-color: transparent;
+}
+
+.projImageContainer {
+    margin: 2.5%;
+    border-radius: 5%;  
 }
 
 .projImage {
-    margin: 2.5%;
+    object-fit: fill;
+    width: 200px;
+    height: 200px;
+    border-radius: 45%;
+    filter: brightness(80%);
+}
+
+.projImage:hover {
+
+    transform: rotateX(20);
+}
+
+.projImage::after {
+    position: relative;
+    bottom: -30px;
+    background: rgb(198, 195, 195);
+    width: 90%;
+    height:4px;
+    left:3%;
+    border-radius:50%;
+    filter: blur(3px);
+}
+
+.projImgLeft {
+    float: left;
+}
+
+.projImgRight {
+    float: right;
+    padding-left: 5px;
+}
+
+.projTitle {
+   
 }
 
 #proj1, #proj3 {
     right: 12.5vw;
+    text-align: left;
+
 }
 
 #proj2 {
     left: 12vw;
+    text-align: right;
 }
 
 /* Languages */
@@ -105,20 +147,61 @@
     padding: 350px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 30vh;
+    height: 45vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(35, 42, 61), rgb(56, 56, 86)); 
+    background-image: linear-gradient(to bottom, rgba(37, 48, 78), var(--cHeader)); 
 }
 
 /* Footer */
 
-#footer {
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 2vh;
     color: white;
-    background-color: rgb(47, 47, 65);
+    background-color: var(--cHeader);
 }
+
+.footerGreet {
+    min-height: 75px;
+    min-width: 37%;
+    text-align: center;
+}
+
+.footerGreet hr {
+    border: 3px white groove;
+    box-shadow: 2px 2px 5px white;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5%;
+    padding: 2px;
+    width: 200px;
+}
+
+.footerInfo a {
+    color: white;
+    text-decoration: none;
+}
+
+.footerInfo a:hover {
+    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.777);
+    transition: text-shadow .35s;
+}
+
+.icon {
+    margin: 0 1.75%;
+    height: 35px;
+    width: 23px;
+    padding-bottom: 9px;
+}
+
 
 
 
