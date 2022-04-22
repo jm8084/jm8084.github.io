@@ -52,6 +52,7 @@
     position: relative;
     justify-content: space-evenly;
     flex-direction: column;
+    width: 100%;
     top: 60px;
     color: rgb(255, 255, 255);
 }
@@ -81,49 +82,44 @@
     position:relative;
     width: 75vw;
     min-height: 25vh;
-    max-width: 800px;
+    max-width: 850px;
     margin: 10px 0;
     border: none;
     color: white;
     background-color: transparent;
 }
 
+.project:hover {
+    border-radius: 2%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0));
+}
+
 .projImageContainer {
     margin: 2.5%;
-    border-radius: 5%;  
 }
 
 .projImage {
     object-fit: fill;
     width: 200px;
     height: 200px;
-    border-radius: 45%;
-    filter: brightness(80%);
-}
-
-.projImage:hover {
-
-    transform: rotateX(20);
-}
-
-.projImage::after {
-    position: relative;
-    bottom: -30px;
-    background: rgb(198, 195, 195);
-    width: 90%;
-    height:4px;
-    left:3%;
-    border-radius:50%;
-    filter: blur(3px);
+    border-radius: 50%;
+    border-left: 2px outset rgba(255, 255, 255, 0.4);
+    border-top: 1px outset rgba(255, 255, 255, 0.4);
+    box-shadow: -3px 2px 8px white;
+    filter: brightness(45%);
+    filter: contrast(120%); 
+    filter: grayscale(5%);
 }
 
 .projImgLeft {
     float: left;
+
 }
 
 .projImgRight {
     float: right;
     padding-left: 5px;
+
 }
 
 .projTitle {
@@ -191,8 +187,8 @@ footer {
 }
 
 .footerInfo a:hover {
-    text-shadow: 3px 3px 5px rgba(255, 255, 255, 0.777);
-    transition: text-shadow .35s;
+    text-shadow: 1px 3px 7px rgba(255, 255, 255, 0.777);
+    transition: text-shadow .45s;
 }
 
 .icon {
