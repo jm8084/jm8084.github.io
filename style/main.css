@@ -6,17 +6,17 @@
 
 #header {
     background-color: var(--cHeader);
-    height: 6vh;
+    height: 60px;
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 200;
+    z-index: 100;
 }
 
-nav {
+#header nav {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
@@ -30,20 +30,17 @@ nav {
 }
 
 #header a {
-    margin: 5px 10px;
+    margin: 7px;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .nav-link:hover {
     text-shadow: 3px 2px 12px rgba(255, 255, 255, 0.743);
     background-color: var(--cHeader);
-    border-radius: 0 0 10% 10%;
-    border-right: 1px solid var(--cHeader);
-    border-left: 1px solid var(--cHeader);
-    border-bottom: 3px solid white;
+    border-radius: 10%;
     padding-top: 10%;
+    border-bottom: solid 2px;
     transition: text-shadow .25s;
     transition: padding-top .4s;
 }
@@ -55,19 +52,16 @@ nav {
     position: relative;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 100%;
-    top: 0;
-    left: 0;
+    width: 100%;
+    top: 60px;
     color: rgb(255, 255, 255);
 }
 
 /* Banner */
 
 #banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 95vh;
+    padding: 10vh 0 10vh 2vw;
+    height: 50vh;
     background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
 }
 
@@ -88,7 +82,7 @@ nav {
     position:relative;
     width: 75vw;
     min-height: 25vh;
-    max-width: 800px;
+    max-width: 850px;
     margin: 10px 0;
     border: none;
     color: white;
@@ -106,35 +100,36 @@ nav {
 
 .projImage {
     object-fit: fill;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border-left: 2px outset rgba(255, 255, 255, 0.4);
     border-top: 1px outset rgba(255, 255, 255, 0.4);
     box-shadow: -3px 2px 8px white;
-    filter: brightness(70%);
-    filter: contrast(55%); 
-    filter: grayscale(15%);
-    transition: border-radius 1s;
-}
-
-.projImage:hover {
-    border-radius: 25%;
-    transition: border-radius .57s;
+    filter: brightness(45%);
+    filter: contrast(120%); 
+    filter: grayscale(5%);
 }
 
 .projImgLeft {
     float: left;
+
 }
 
 .projImgRight {
     float: right;
     padding-left: 5px;
+
+}
+
+.projTitle {
+   
 }
 
 #proj1, #proj3 {
     right: 12.5vw;
     text-align: left;
+
 }
 
 #proj2 {
@@ -145,9 +140,10 @@ nav {
 /* Languages */
 
 #langs {
+    padding: 350px;
     display: flex;
     flex-direction: column;
-    height: 85vh;
+    height: 45vh;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(37, 48, 78), var(--cHeader)); 
@@ -160,29 +156,29 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 25vh;
+    padding: 2vh;
     color: white;
     background-color: var(--cHeader);
 }
 
-.footer {
-    min-width: 55%;
+.footerGreet {
+    min-height: 75px;
+    min-width: 37%;
     text-align: center;
 }
 
-.footer hr {
+.footerGreet hr {
     border: 3px white groove;
     box-shadow: 2px 2px 5px white;
 }
 
 .footerInfo {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: .5%;
-    padding: 1px;
-    min-width: 175px;
-    height: 3vh;
+    padding: 2px;
+    width: 200px;
 }
 
 .footerInfo a {
@@ -196,7 +192,7 @@ footer {
 }
 
 .icon {
-    margin: 0 5px;
+    margin: 0 1.75%;
     height: 35px;
     width: 23px;
     padding-bottom: 9px;
