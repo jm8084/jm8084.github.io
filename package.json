@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Portfolio by Jospin Mihigo",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0",
+    "hbs": "^4.2.0",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jm8084/myPort.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/jm8084/myPort/issues"
+  },
+  "homepage": "https://jm8084.github.io/myPort"
+}
