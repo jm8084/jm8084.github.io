@@ -56,7 +56,6 @@ nav button {
     transition: padding-top .4s;
 }
 
-
 /*****----- PAGES -----*****/
 
 /* page wapper */
@@ -79,10 +78,42 @@ nav button {
 /* Banner */
 
 #banner {
-    padding: 10vh 0 10vh 2vw;
     width: 100%;
-    height: 45vh;
+    height: 85vh;
     background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
+}
+
+#banner figure {
+    position: relative;
+    top: 35%;
+}
+
+.bannerTxt {
+    position: relative;
+    width: 100%;
+}
+
+.txt {
+    position: absolute;
+    margin: 2% 0;
+}
+
+.txtRear {
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.15);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.14);
+}
+
+.txtMid {
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.55);
+    text-shadow: 1px 2px 8px rgba(255, 255, 255, 0.4);
+}
+
+.txtFront {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.24);
 }
 
 /* Projects */
@@ -94,7 +125,7 @@ nav button {
     min-height: 90vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(69, 86, 133), rgb(37, 48, 78));
+    background-image: linear-gradient(to bottom, rgba(69, 86, 133), var(--cHeader));
 
 }
 
@@ -126,8 +157,8 @@ nav button {
     border-left: 2px outset rgba(255, 255, 255, 0.4);
     border-top: 1px outset rgba(255, 255, 255, 0.4);
     box-shadow: -3px 2px 8px white;
-    filter: brightness(70%);
-    filter: contrast(55%); 
+    filter: brightness(50%);
+    filter: contrast(45%); 
     filter: grayscale(15%);
     transition: border-radius 1s;
 }
@@ -159,19 +190,6 @@ nav button {
     text-align: right;
 }
 
-/* Languages */
-
-#langs {
-    padding: 350px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 45vh;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(to bottom, rgba(37, 48, 78), var(--cHeader)); 
-}
-
 /**----- ABOUT -----**/
 
 .resume {
@@ -180,10 +198,8 @@ nav button {
     justify-content: center;
     align-items: center;
     margin-top: 2%;
-    min-height: 90%;
+    min-height: 70%;
 }
-
-
 
 /*****----- FOOTER -----******/
 
