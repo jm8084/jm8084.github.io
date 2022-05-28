@@ -67,8 +67,7 @@ nav button {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
-    top: 60px;
+    padding-top: 60px;
     color: rgb(255, 255, 255);
     background-color: var(--cHeader);
 }
@@ -79,7 +78,7 @@ nav button {
 
 #banner {
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
 }
 
@@ -95,7 +94,6 @@ nav button {
 
 .txt {
     position: absolute;
-    margin: 2% 0;
 }
 
 .txtRear {
@@ -116,90 +114,99 @@ nav button {
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.24);
 }
 
-/* Projects */
 
-#projectContainer {
+/**----- ABOUT -----**/
+
+#aboutContainer {
     display:flex;
     flex-direction: column;
     width: 100%;
     min-height: 90vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(69, 86, 133), var(--cHeader));
+    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
 
 }
 
-.project {
-    position:relative;
-    width: 75vw;
-    min-height: 25vh;
-    max-width: 800px;
-    margin: 10px 0;
+.pageIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+    padding: 8px 0;
+    width: 80%;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.202), transparent);
+}
+
+.about {
+    position: relative;
+    display: flex;
+    width: 80%;
+    max-height: 35vh;
+    margin: 2.5% 0;
     border: none;
     color: white;
-    background-color: transparent;
 }
 
-.project:hover {
+.about:hover {
     border-radius: 2%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0));
 }
 
-.projImageContainer {
-    margin: 2.5%;
+.aboutLeft {
+    justify-content: flex-start;
 }
 
-.projImage {
-    object-fit: fill;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border-left: 2px outset rgba(255, 255, 255, 0.4);
-    border-top: 1px outset rgba(255, 255, 255, 0.4);
-    box-shadow: -3px 2px 8px white;
-    filter: brightness(50%);
-    filter: contrast(45%); 
-    filter: grayscale(15%);
-    transition: border-radius 1s;
+.aboutRight {
+    justify-content: flex-end;
 }
 
-.projImage:hover {
-    border-radius: 25%;
-    transition: border-radius .57s;
-}
-
-.projImgLeft {
-    float: left;
-
-}
-
-.projImgRight {
-    float: right;
-    padding-left: 5px;
-
-}
-
-#proj1, #proj3 {
-    right: 12.5vw;
-    text-align: left;
-
-}
-
-#proj2 {
-    left: 12vw;
-    text-align: right;
-}
-
-/**----- ABOUT -----**/
-
-.resume {
+.aboutContent {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 1.25%;
+    width: 44%;
+}
+
+.aboutHR {
+    width: 90%;
+    padding: 3px;
+    background-image: linear-gradient(to right, var(--cHeader), rgba(255, 255, 255, 0.5), var(--cHeader));
+}
+
+.aboutImage {
+    width: 300px;
+    height: 300px;
+    filter: brightness(25%);
+    filter: contrast(75%); 
+    filter: grayscale(10%);
+    border-radius: 20% 3% 20% 3%;
+}
+
+#imgRight {
+    border-radius: 3% 20% 3% 20%;
+
+}
+
+/*.aboutImage:hover {
+    border-radius: 25%;
+    transition: border-radius .57s;
+}*/
+
+/**----- PROJECTS -----**/
+
+#projectsContainer {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
-    min-height: 70%;
+    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
 }
+
 
 /*****----- FOOTER -----******/
 
@@ -210,8 +217,7 @@ footer {
     align-items: center;
     min-height: 26vh;
     color: white;
-    background-color: var(--cHeader);
-    margin-top: 13px;
+    background-color: rgba(69, 86, 133);
 }
 
 .footer {
@@ -220,8 +226,8 @@ footer {
 }
 
 .footer hr {
-    border: 3px white groove;
-    box-shadow: 2px 2px 5px white;
+    border: 2px white inset;
+    box-shadow: 1px 2px 5px white;
 }
 
 .footerInfo {
@@ -249,6 +255,15 @@ footer {
     height: 35px;
     width: 23px;
     padding-bottom: 9px;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1% 0;
+    min-height: 70%;
 }
 
 
