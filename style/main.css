@@ -1,5 +1,6 @@
 :root {
-    --cHeader: rgb(44, 52, 95) ;
+    --cHeader: rgb(44, 52, 95);
+    --cFooter: rgba(69, 86, 133);
 }
 
 a {
@@ -10,10 +11,11 @@ a {
 
 #header {
     background-color: var(--cHeader);
-    height: 60px;
+    height: 10vh;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,17 +58,19 @@ header button {
 
 /*****----- PAGES -----*****/
 
-/* page wapper */
-
 .page-wrapper {
-    display: flex;
-    position: relative;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+    width:100vw;
+    overflow-x: hidden;
     color: rgb(255, 255, 255);
-    background-color: var(--cHeader);
+}
+
+.pageIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    width: fit-content;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.202), transparent);
 }
 
 /**----- HOME -----**/
@@ -76,8 +80,9 @@ header button {
 #banner {
     position: relative;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
+    height: 90vh;
+    margin-top: 10vh;
+    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));
 }
 
 #banner figure {
@@ -92,22 +97,20 @@ header button {
 
 .txt {
     position: absolute;
+    width: fit-content;
 }
 
 .txtRear {
-    font-size: 19px;
     color: rgba(255, 255, 255, 0.15);
     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.14);
 }
 
 .txtMid {
-    font-size: 23px;
     color: rgba(255, 255, 255, 0.55);
     text-shadow: 1px 2px 8px rgba(255, 255, 255, 0.4);
 }
 
 .txtFront {
-    font-size: 25px;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.24);
 }
@@ -118,45 +121,21 @@ header button {
 #aboutContainer {
     display:flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 90vh;
-    justify-content: center;
+    width: 100vw;
+    height: (90vh, fit-content);
+    margin-top: 10vh;
     align-items: center;
-    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
+    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));
 
-}
-
-.pageIntro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2% 0;
-    padding: 8px 0;
-    width: 80%;
-    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.202), transparent);
 }
 
 .about {
     position: relative;
-    display: flex;
-    width: 80%;
-    max-height: 35vh;
-    margin: 2.5% 0;
-    border: none;
+    width: 100vw;
+    margin: 3.5% 0%;
     color: white;
-}
-
-.about:hover {
-    border-radius: 2%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.099), rgba(0, 0, 0, 0));
-}
-
-.aboutLeft {
-    justify-content: flex-start;
-}
-
-.aboutRight {
-    justify-content: flex-end;
+    box-shadow: 1px 5px 11px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
 }
 
 .aboutContent {
@@ -164,29 +143,20 @@ header button {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 0 1.25%;
-    width: 44%;
+    margin: 2% 1.25%;
 }
 
-.aboutHR {
-    width: 90%;
-    padding: 3px;
-    background-image: linear-gradient(to right, var(--cHeader), rgba(255, 255, 255, 0.5), var(--cHeader));
+.aboutHead {
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.79);
 }
 
 .aboutImage {
-    width: 300px;
-    height: 300px;
-    filter: brightness(25%);
-    filter: contrast(75%); 
+    width: 150px;
+    height: 150px; 
     filter: grayscale(10%);
-    border-radius: 20% 3% 20% 3%;
+    border-radius: 50% 50% 50% 50%;
 }
 
-#imgRight {
-    border-radius: 3% 20% 3% 20%;
-
-}
 
 /*.aboutImage:hover {
     border-radius: 25%;
@@ -198,49 +168,63 @@ header button {
 #projectsContainer {
     display:flex;
     flex-direction: column;
-    width: 100%;
-    min-height: 90vh;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom,var(--cHeader), rgba(69, 86, 133));
+    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+   
+}
+
+.resumeIMG {
+    width: 90vw;
+    height: 750px;
 }
 
 
 /*****----- FOOTER -----******/
 
-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 26vh;
+footer { 
+    position: relative;
+    width: 100vw;
+    height: 20vh;
+    bottom: 0;
     color: white;
-    background-color: rgba(69, 86, 133);
-}
-
-.footer {
-    min-width: 55%;
+    background-color: var(--cFooter);
     text-align: center;
+    padding-top: 10px;
 }
 
-.footer hr {
-    border: 2px white inset;
-    box-shadow: 1px 2px 5px white;
+.hl {
+    margin-top: 0;
+    width: 80vw;
+    margin-inline: auto;
+    padding: 1px;
+    background-image: linear-gradient(to right, var(--cFooter), rgba(255, 255, 255, 0.769), var(--cFooter));
 }
 
 .footerInfo {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin: .5%;
-    padding: 1px;
-    min-width: 175px;
-    height: 3vh;
+    width: 25vw;
+    height: fit-content;
 }
 
 .footerInfo a {
     color: white;
     text-decoration: none;
+    margin-bottom: 0;
 }
 
 .footerInfo a:hover {
@@ -252,16 +236,6 @@ footer {
     margin: 0 5px;
     height: 35px;
     width: 23px;
-    padding-bottom: 9px;
-}
-
-.resume {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1% 0;
-    min-height: 70%;
 }
 
 

@@ -43,20 +43,28 @@ function showPage(page, button) {
 function flow(elem) {
     const maxWidth = elem.parentElement.clientWidth;
     const maxHeight = elem.parentElement.clientHeight;
+    var speed = 10;
 
+    if(maxWidth > 475){
+        speed=5;
+    } else if(maxWidth > 950){
+        speed=1;
+    }
+
+    // set initial random dist from top
     var rand = getRand(maxHeight);
     elemHeights[elem.dataset.idx] = rand;
     elem.style.top = rand+"px";
 
-    // start element on left or right of screen
+    // start element on left or right of screen (offset for different entry)
+    const offset = (Math.floor(Math.random() * 4)+1.5)*1000/speed;
     if(elem.dataset.flow == "L"){
-        elem.style.left = maxWidth + "px";
+        elem.style.left = (maxWidth + offset) + "px";
     } else {
-        elem.style.left = -(elem.clientWidth)+"px";
+        elem.style.left = (-(elem.clientWidth) - offset)+"px";
     }
 
-    var pos = elem.offsetLeft;
-
+    // change element innerHTML & position
     const resetElem = (e)=>{
         setHTML(e);
         rand = getRand(maxHeight);
@@ -64,8 +72,10 @@ function flow(elem) {
         e.style.top = rand+"px";
     }
 
+    var pos = elem.offsetLeft;
     setHTML(elem);
 
+    // move element accross screen from homePage
     const id = setInterval(()=>{ 
         if(local.getItem('page') === 'homePage'){
             if(elem.dataset.flow == "L"){
@@ -88,7 +98,7 @@ function flow(elem) {
                 }
             }     
         }
-    }, 20);  
+    }, speed);  
 }
 
 // set innerHTML
@@ -102,6 +112,7 @@ function setHTML(elem){
     });   
 
     var txtSelect = (arr)=>{
+        // random 0 - maxRand
         var x = Math.floor(Math.random() * maxRand);
         if(arr[x] == undefined){
             return txtSelect(arr);
@@ -122,16 +133,17 @@ function setHTML(elem){
  * @returns Random number meeting all constraints
  */
 function getRand(max){
-    const padding = 65;
+    const padding = 25;
     var rand = 0;
     var valid = false;
 
     while(!valid){
         valid = true;
+        // random 0 - (max-65)
         rand = Math.floor(Math.random() * (max-65));
 
         elemHeights.forEach((x)=>{
-            if((Math.abs(x - rand)<=padding) || (rand < 50) ) {
+            if((Math.abs(x - rand)<=padding) || (rand < 65) ) {
                 valid = false;     
             }
         });   
@@ -178,7 +190,7 @@ const techs = [
     "React.js", "HTML", "MongoDB"
 ];
 const elemHeights = [];
-const elemTxt = [" ", " ", " ", " ", " "];
+const elemTxt = [];
 
 
 // init
@@ -186,6 +198,7 @@ const local = window.localStorage;
 const cHeader = "rgb(44, 52, 95)";
 local.setItem('page', 'homePage');  //pages: homePage, aboutPage, projectsPage
 
+// Content loaded events
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('button').forEach(button => {
         button.onclick = () => {
@@ -194,7 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.txt').forEach(elem => {
-        setTimeout(flow(elem), Math.floor(Math.random() * 500)+50);
+        elemTxt.push(" ")
+        flow(elem);
     });
 });
 
