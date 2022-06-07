@@ -8,17 +8,17 @@
  */
 function showPage(page, button) {
     // hide all pages from view & show selected page
-    document.querySelectorAll('.page-wrapper').forEach(div => {
+    document.querySelectorAll('.page').forEach(div => {
         div.style.display = 'none';
     });
-    document.querySelector(`#${page}`).style.display = 'block';
+    document.querySelector(`#${page}`).style.display = 'flex';
 
     // set prev-selected page nav-link css back to default
     const prev = local.getItem('page');
     if( prev != 'homePage') {
-        document.querySelectorAll('.nav-link').forEach( btn => {
+        document.querySelectorAll('.navLink').forEach( btn => {
             if(btn.dataset.page === prev){
-                btn.style = '.nav-link'
+                btn.style = '.navLink'
             }
        });
     }
@@ -27,7 +27,7 @@ function showPage(page, button) {
     if( page !== 'homePage') {
         button.style.borderBottom = "solid 2px white";
         button.style.borderRadius = "10%";
-        button.style.paddingTop = "10%";
+        button.style.paddingTop = "7vh";
         button.style.backgroundColor = cHeader;
     }
 
@@ -44,11 +44,18 @@ function flow(elem) {
     const maxWidth = elem.parentElement.clientWidth;
     const maxHeight = elem.parentElement.clientHeight;
     var speed = 10;
+    var offset = 0;
 
-    if(maxWidth > 475){
-        speed=5;
-    } else if(maxWidth > 950){
+    // set element flowspeed & initial gap btwn 
+    if(maxWidth > 999){
         speed=1;
+        offset = (Math.floor(Math.random() * 4)+1)*400;
+
+    } else if(maxWidth > 500){
+        speed=5;
+        offset =(Math.floor(Math.random() * 4)+1)*200;
+    } else {
+        offset = (Math.floor(Math.random() * 4)+1)*100;
     }
 
     // set initial random dist from top
@@ -56,8 +63,7 @@ function flow(elem) {
     elemHeights[elem.dataset.idx] = rand;
     elem.style.top = rand+"px";
 
-    // start element on left or right of screen (offset for different entry)
-    const offset = (Math.floor(Math.random() * 4)+1.5)*1000/speed;
+    // start element on left or right of screen
     if(elem.dataset.flow == "L"){
         elem.style.left = (maxWidth + offset) + "px";
     } else {

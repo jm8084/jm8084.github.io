@@ -13,17 +13,16 @@
     <body>   
         <!-- Header -->
         <header id="header">
-            <button class="nav-link " data-page="projectsPage" href="#">My Projects</button>
-            <button class="navbar-brand " data-page="homePage" href="#"> <img id="header-logo" src="images/JM-whtLogo.png" alt="Home" /> </button>
-            <button class="nav-link " data-page="aboutPage" href="#">About Me</button>
+            <button class="navLink " data-page="projectsPage" href="#">My Projects</button>
+            <button class="navbar-brand " data-page="homePage" href="#"> <img id="headerLogo" src="images/JM-whtLogo.png" alt="Home" /> </button>
+            <button class="navLink " data-page="aboutPage" href="#">About Me</button>
         </header>
 
-    <!--************************ PAGES ******************************-->
-        <!--****** HOME PAGE ******-->
-        <div id="homePage" class="page-wrapper">
-            <!--Banner-->
-            <section id="banner">
-                <!--*** Add epmty string to elemTXT[] for each tag below!!! ***-->
+        <!--************************ PAGES ******************************-->
+        <div id="pageWrapper">
+
+            <!--****** HOME PAGE ******-->
+            <div id="homePage" class="page pageContainer">
                 <p data-idx=0 data-flow="L" class="txt txtRear"> . </p>
                 <p data-idx=1 data-flow="R" class="txt txtFront"> . </p>
                 <p data-idx=2 data-flow="L" class="txt txtFront"> . </p>
@@ -37,12 +36,10 @@
                     <h1 id="name" class="display-1">Jospin Mihigo</h1>
                     <p class="lead">Software Engineer building ...</p>
                 </figure>
-            </section>  
-        </div>
+            </div>
 
-        <!--****** ABOUT PAGE ******-->
-        <div id="aboutPage" class="page-wrapper" style="display: none;">
-            <section id="aboutContainer" >
+            <!--****** ABOUT PAGE ******-->
+            <div id="aboutPage" class="page pageContainer" style="display: none;">
 
                 <div class="pageIntro">
                     <h5> 4th-year Software Engineer at <abbr title="Rochester Institute of Technology">RIT</abbr></h1>
@@ -52,63 +49,56 @@
                 <!--About car-->
                 <div id="about1" class="about">
                     <div class="aboutContent">
-                        <img id="imgLeft" class="aboutImage" src="images/e46.jpg" alt="BMW-E46-M3" />
-                        <h5 class="display-5  aboutHead"> Car Enthusiast </h5>
-                        <p>I'd rather drive an old car I love over some new car</p>
+                        <img class="aboutImage" src="images/e46.jpg" alt="BMW-E46-M3" />
+                        <h5 class="display-5  aboutHead"> Cars </h5>
                     </div>
                 </div>
 
                 <!--About stock-->
                 <div id="about2" class="about">
                     <div class="aboutContent">
-                        <img id="imgRight" class="aboutImage" src="images/stockMarket.jpg" alt="" />
-                        <h5 class="display-5 aboutHead"> Investor </h5>
-                        <p>Never account sunk cost in decision making!</p>
+                        <img class="aboutImage" src="images/stockMarket.jpg" alt="" />
+                        <h5 class="display-5 aboutHead"> Markets </h5>
                     </div> 
                 </div>
 
                 <!--About dog-->
                 <div id="about3" class="about">
                     <div class="aboutContent">
-                        <img id="imgLeft" class="aboutImage" src="images/otis.png" alt="" />
+                        <img class="aboutImage" src="images/otis.png" alt="" />
                         <h5 class="display-5 aboutHead"> Lotus </h5>
-                        <p>A bundle of joy</p>
                     </div>
-               </div>
+                </div>
 
                 <!--About art-->
                 <div id="about4" class="about" style="display: none;">                    
                     <div class="aboutContent">
-                        <img id="imgRight" class="aboutImage" src="images/WAAITT.jpg" alt="" />
-                        <h5 class="display-5 aboutHead"> Art Enthusiast </h5>
-                        <p>Everyone has a story to tell, how'll you tell yours?</p>
+                        <img class="aboutImage" src="images/WAAITT.jpg" alt="" />
+                        <h5 class="display-5 aboutHead"> Art  </h5>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
 
-        <!--****** PROJECTS PAGE ******-->
-        <div id="projectsPage" class="page-wrapper" style="display: none;">
-            <section id="projectsContainer">
-
-                <figure class="text-center">
-                    <h4 class="display-4" style="margin-top: 1%; opacity: 15%; text-shadow: 1px 3px 12px white;">Full Page Coming Soon ...</h4>
-                </figure>
-
+            <!--****** PROJECTS PAGE ******-->
+            <div id="projectsPage" class="page pageContainer" style="display: none;">
                 <div class="pageIntro">
                     <h5> Fullstack Web Dev. / Software Engineer</h1>
                     <p class="fw-lighter">Where problems meet solutions.</p>
                 </div>
 
+                <figure class="text-center">
+                    <h4 class="display-4" style="margin-top: 1%; opacity: 15%; text-shadow: 1px 3px 12px white;">Full Page Coming Soon ...</h4>
+                </figure>
+
                 <div class="resume">
                     <iframe class="resumeIMG" src="images/JM-2022Resume.pdf"></iframe>
                 </div>
-            </section>
+            </div>
         </div>
-    <!--***************************************************************-->
+        <!--***************************************************************-->
 
-        <!--Footer-->
-        <footer>
+         <!--****** FOOTER ******-->
+         <footer>
             <h6 style="opacity: .30; margin-bottom: 0;">Get In Touch</h6>      
             <hr class="hl"></hr>
         
