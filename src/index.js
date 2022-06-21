@@ -104,7 +104,7 @@ function flow(elem) {
                 }
             }     
         }
-    }, speed);  
+    }, speed);
 }
 
 // set innerHTML
@@ -191,7 +191,7 @@ const topics = [
 ];
 
 const techs = [
-    "CSS", "DJango", "Material-UI","Postgres", "AWS",
+    "CSS", "DJango", "Material-UI","PostgreSQL", "AWS",
     "git", "Python", "Javascript", "Java","Bootstrap",
     "React.js", "HTML", "MongoDB"
 ];

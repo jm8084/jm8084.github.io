@@ -7,5 +7,7 @@
     Unfinished functional release to get feedback & avoid unnecessary delay
 
 ### What's Next 
-- [ ] About-page content dropdown
-- [ ] Project-page card UI/layout
+- [x] Project card
+- [ ] card modal view
+- [ ] About content animation (accordion)
+

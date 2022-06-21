@@ -7,6 +7,10 @@ a {
     color: white;
 }
 
+.blur {
+    filter: brightness(0.8) blur(21px);
+}
+
 /******----- HEADER -----******/
 
 #header {
@@ -150,6 +154,11 @@ header button {
 
 /**----- PROJECTS -----**/
 
+.projectCard {
+    color: black;
+    margin: 5% 0;
+}
+
 .resume {
     display: flex;
     flex-direction: column;
@@ -209,6 +218,8 @@ footer {
     height: 35px;
     width: 23px;
 }
+
+/***** OTHER *****/
 
 @media only screen and (min-width: 750px) {
 
