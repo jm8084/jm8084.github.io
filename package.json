@@ -1,0 +1,22 @@
+{
+  "name": "myport",
+  "version": "1.0.0",
+  "description": "Where past, present, & future projects, big or small, can be displayed & organized.     Alongside other hobbies I enjoy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jm8084/myPort.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jm8084/myPort/issues"
+  },
+  "homepage": "https://github.com/jm8084/myPort#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

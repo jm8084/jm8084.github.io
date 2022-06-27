@@ -1,0 +1,15 @@
+// accordion 
+$accordion-bg: white;
+$accordion-color: black;
+$accordion-border-width: 0px;
+
+$accordion-button-bg:   rgb(69, 86, 133);
+$accordion-button-active-bg: $accordion-button-bg;
+$accordion-button-color: white;
+$accordion-button-active-color: $accordion-button-color;
+
+$accordion-button-focus-box-shadow: none;
+
+
+//import 
+@import '../node_modules/bootstrap/scss/bootstrap'

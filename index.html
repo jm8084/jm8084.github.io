@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/bs5/bs-main.min.css" />
         <title>My Portfolio</title>
         <script src="src/index.js"></script>
 
@@ -13,9 +14,9 @@
     <body>   
         <!-- Header -->
         <header id="header">
-            <button class="navLink " data-page="projectsPage" href="#">My Projects</button>
-            <button class="navbar-brand " data-page="homePage" href="#"> <img id="headerLogo" src="images/JM-whtLogo.png" alt="Home" /> </button>
-            <button class="navLink " data-page="aboutPage" href="#">About Me</button>
+            <button class="navLink toPage" data-page="projectsPage" href="#">My Projects</button>
+            <button class="navbar-brand toPage" data-page="homePage" href="#"> <img id="headerLogo" src="images/JM-whtLogo.png" alt="Home" /> </button>
+            <button class="navLink toPage" data-page="aboutPage" href="#">About Me</button>
         </header>
 
         <!--************************ PAGES ******************************-->
@@ -46,35 +47,97 @@
                     <p class="fw-lighter">building, learning, improving</p>
                 </div>
 
-                <!--About car-->
-                <div id="about1" class="about">
-                    <div class="aboutContent">
-                        <img class="aboutImage" src="images/e46.jpg" alt="BMW-E46-M3" />
-                        <h5 class="display-5  aboutHead"> Cars </h5>
+                <div id="aboutAccordion" class="accordion accordion-flush">
+                    <!--About Me-->
+                    <div id="about0" class="about accordion-item">
+                        <h2 id="headingZero" class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                                <h4>Me</h4>  
+                            </button>
+                        </h2>
+                        <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#aboutAccordion">
+                            <div class="aboutContent accordion-body">
+                                <!--add avatar or actual pic?-->
+                                <p>
+                                    Software engineer, building what I can, how I can. <br>
+                                    Lifelong learner, learning what I can, when I can. <br>
+                                    Human, improving where I can, to be the best I can. <br>
+                                    <span class="aboutSoon small">Full description coming soon...</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!--About stock-->
-                <div id="about2" class="about">
-                    <div class="aboutContent">
-                        <img class="aboutImage" src="images/stockMarket.jpg" alt="" />
-                        <h5 class="display-5 aboutHead"> Markets </h5>
-                    </div> 
-                </div>
-
-                <!--About dog-->
-                <div id="about3" class="about">
-                    <div class="aboutContent">
-                        <img class="aboutImage" src="images/otis.png" alt="" />
-                        <h5 class="display-5 aboutHead"> Lotus </h5>
+                    <!--About car-->
+                    <div id="about1" class="about accordion-item">
+                        <h2 id="headingOne" class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <h4>Cars</h4> 
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
+                            <div class="aboutContent accordion-body">
+                                <img class="aboutImage" src="images/e46.jpg" alt="BMW-E46-M3" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit scelerisque in dictum non. Arcu ac tortor dignissim convallis. In hac habitasse platea dictumst quisque. Tellus elementum sagittis vitae et leo duis.
+                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!--About art-->
-                <div id="about4" class="about" style="display: none;">                    
-                    <div class="aboutContent">
-                        <img class="aboutImage" src="images/WAAITT.jpg" alt="" />
-                        <h5 class="display-5 aboutHead"> Art  </h5>
+                    <!--About stock-->
+                    <div id="about2" class="about accordion-item">
+                        <h2 id="headingTwo" class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <h4>Markets</h4>  
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aboutAccordion">
+                            <div class="aboutContent accordion-body">
+                                <img class="aboutImage" src="images/stockMarket.jpg" alt="" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sed pulvinar proin gravida. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Mus mauris vitae ultricies leo integer malesuada nunc.
+                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--About dog-->
+                    <div id="about3" class="about accordion-item">
+                        <h2 id="headerThree" class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <h4>Lotus</h4>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
+                            <div class="aboutContent accordion-body">
+                                <img class="aboutImage" src="images/otis.png" alt="" />
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sed pulvinar proin gravida. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Mus mauris vitae ultricies leo integer malesuada nunc.
+                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--About art-->
+                    <div id="about4" class="about" style="display: none;">                    
+                        <h2 id="headerFour" class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                <h4>Art</h4>  
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
+                            <div class="aboutContent accordion-body">
+                                <img class="aboutImage" src="images/otis.png" alt="" />
+                                <p>
+                                    ...
+                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -206,7 +206,7 @@ local.setItem('page', 'homePage');  //pages: homePage, aboutPage, projectsPage
 
 // Content loaded events
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('button').forEach(button => {
+    document.querySelectorAll('.toPage').forEach(button => {
         button.onclick = () => {
             showPage(button.dataset.page, button);
         }
