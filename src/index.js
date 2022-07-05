@@ -1,45 +1,8 @@
-
-
-/**
- * Display div(page) elements based on which nav button is selected.
- * 
- * @param {Page to be shown} page 
- * @param {acive page button} button 
- */
-function showPage(page, button) {
-    // hide all pages from view & show selected page
-    document.querySelectorAll('.page').forEach(div => {
-        div.style.display = 'none';
-    });
-    document.querySelector(`#${page}`).style.display = 'flex';
-
-    // set prev-selected page nav-link css back to default
-    const prev = local.getItem('page');
-    if( prev != 'homePage') {
-        document.querySelectorAll('.navLink').forEach( btn => {
-            if(btn.dataset.page === prev){
-                btn.style = '.navLink'
-            }
-       });
-    }
-
-    // set selected page nav-link css to appear selected
-    if( page !== 'homePage') {
-        button.style.borderBottom = "solid 2px white";
-        button.style.borderRadius = "10%";
-        button.style.paddingTop = "7vh";
-        button.style.backgroundColor = cHeader;
-    }
-
-    // set local current page
-    local.setItem('page', page);
-}
-
 /**
  * Moves element right 1px until end of doc; then resets from left
  * 
  * @param {element to be affected by flow animation} elem 
- */
+*/
 function flow(elem) {
     const maxWidth = elem.parentElement.clientWidth;
     const maxHeight = elem.parentElement.clientHeight;
@@ -82,28 +45,26 @@ function flow(elem) {
     setHTML(elem);
 
     // move element accross screen from homePage
-    const id = setInterval(()=>{ 
-        if(local.getItem('page') === 'homePage'){
-            if(elem.dataset.flow == "L"){
-                if(pos == -(elem.clientWidth)){
-                    pos = maxWidth;
-                    elem.style.left = maxWidth +"px";
-                    resetElem(elem);
-                } else {
-                    pos--;
-                    elem.style.left = pos + 'px';
-                }
+    const id = setInterval(()=>{   
+        if(elem.dataset.flow == "L"){
+            if(pos == -(elem.clientWidth)){
+                pos = maxWidth;
+                elem.style.left = maxWidth +"px";
+                resetElem(elem);
             } else {
-                if(pos == maxWidth){
-                    pos = -(elem.clientWidth);
-                    elem.style.left = -(elem.clientWidth) + 'px';
-                    resetElem(elem);
-                } else {
-                    pos++;
-                    elem.style.left = pos + 'px';
-                }
-            }     
-        }
+                pos--;
+                elem.style.left = pos + 'px';
+            }
+        } else {
+            if(pos == maxWidth){
+                pos = -(elem.clientWidth);
+                elem.style.left = -(elem.clientWidth) + 'px';
+                resetElem(elem);
+            } else {
+                pos++;
+                elem.style.left = pos + 'px';
+            }
+        }     
     }, speed);
 }
 
@@ -137,7 +98,7 @@ function setHTML(elem){
  * 
  * @param {max distance (in pixels) from top of screen} max
  * @returns Random number meeting all constraints
- */
+*/
 function getRand(max){
     const padding = 25;
     var rand = 0;
@@ -160,7 +121,7 @@ function getRand(max){
 /**
  * 
  * @param {topic name(key) to get data to be displayed on the about page} topic 
- */
+*/
 function aboutInfo(topic) {
     topics.forEach(arr => {
         if(arr.name == topic){
@@ -174,22 +135,7 @@ function aboutInfo(topic) {
 
 /**********-------------------- END FUNCTIONS --------------------***********/
 
-// page data for aboutPage topics
-const topics = [
-    {
-        "name":"dog",
-        "description": "Love my DOGO!"
-    },
-    {
-        "name":"car",
-        "description": "Love my WHIP!"
-    },
-    {
-        "name":"stock",
-        "description": "Love my STONKS!"
-    }
-];
-
+// global variables
 const techs = [
     "CSS", "DJango", "Material-UI","PostgreSQL", "AWS",
     "git", "Python", "Javascript", "Java","Bootstrap",
@@ -200,27 +146,14 @@ const elemTxt = [];
 
 
 // init
-const local = window.localStorage;
 const cHeader = "rgb(44, 52, 95)";
-local.setItem('page', 'homePage');  //pages: homePage, aboutPage, projectsPage
 
 // Content loaded events
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.toPage').forEach(button => {
-        button.onclick = () => {
-            showPage(button.dataset.page, button);
-        }
-    });
-
     document.querySelectorAll('.txt').forEach(elem => {
         elemTxt.push(" ")
         flow(elem);
     });
 });
 
-document.addEventListener('click', () => {
-    document.querySelectorAll('.aboutTopic').forEach(topic => {
-        aboutInfo(topic.dataset.topic);
-    });
-});
 

@@ -3,12 +3,13 @@
     Alongside other hobbies I enjoy.
 
 ## Features / Versions
-### Current (v0.5) 
+### Current (v0.9) 
     Unfinished functional release to get feedback & avoid unnecessary delay
 
 ### What's Next 
-- [x] Project card
-- [x] 'About' content animation (accordion)
 - [ ] card modal view
 - [ ] Fill 'about' descriptons 
+- [ ] Update mobile responsivenss
+- [ ] Fill 'home::before' content
+- [ ] skew #name glass w/mouse
 

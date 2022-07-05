@@ -1,6 +1,12 @@
 :root {
     --cHeader: rgb(44, 52, 95);
     --cFooter: rgb(69, 86, 133);
+    --background: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -13,17 +19,21 @@ a {
 
 /******----- HEADER -----******/
 
+#sec0 {
+    transform: skew(0deg, -10deg) translateY(-120px);
+}
+
 #header {
     background-color: var(--cHeader);
+    color: white;
     height: 11vh;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    height: 0;
+    width: 50vw;
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 50;
+    transform: skew(0deg, 10deg)
 }
 
 #headerLogo {
@@ -31,75 +41,31 @@ a {
     height: 40px;
     padding: 5px;
     border:  solid 3px;
+    margin: 0 10px;
 }
 
-header button {
-    margin: 7px;
-    color: white;
-    background-color: transparent;
-    border: none;
-}
-
-.navLink {
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif
-}
-
-.navLink:hover {
-    color: white;
-    text-shadow: 3px 2px 12px rgba(255, 255, 255, 0.743);
-    background-color: var(--cHeader);
-    border-radius: 10%;
-    padding-top: 3vh;
-    border-bottom: solid 2px;
-    transition: text-shadow .25s;
-    transition: padding-top .4s;
-}
 
 /*****----- PAGES -----*****/
 
-#pageWrapper {
-    height: 90vh;
-    margin-top: 10vh;
-}
-
-.pageContainer {
-    position: relative;
-    overflow-x: hidden;
-    flex-direction: column;
-    width: 100vw;
-    height: 91vh;
-    padding-top: 4vh;
-    align-items: center;
-    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));   
-}
-
-.pageIntro {
-    color: white;
+.page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px 0;
-    width: fit-content;
-    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.202), transparent);
+    position: relative;
+    width: 100vw;
+    height: fit-content;
+    padding: 5vh;   
 }
 
-/**----- HOME -----**/
-
-#homePage figure {
+.pageTitle {
     color: white;
-    position: relative;
-    top: 32vh;
-}
-
-.bannerTxt {
-    position: relative;
-    width: 100%;
+    margin: 2%;
 }
 
 .txt {
     position: absolute;
     width: fit-content;
+    z-index: 10;
 }
 
 .txtRear {
@@ -117,8 +83,97 @@ header button {
     text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.24);
 }
 
+.infoBanner {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    width: 45vw;
+    text-align: center;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.202), transparent);
+}
+
+/**----- HOME -----**/
+
+.homePage::before {
+    content: " ";
+    color: white;
+    width: 100vw;
+    height: 8rem;
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    transform: skewy(5deg);
+    background-color: var(--background);
+    box-shadow: 0 10px 11px rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.homePage {
+    height: 99vh;
+    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));   
+    overflow-y: visible;
+}
+
+.banner {
+    color: white;
+    position: relative;
+    top: 32vh;
+}
+
+.glass {
+    padding: 1rem;
+    background: linear-gradient(125deg, rgb(255, 255, 255, .1), rgb(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .37);
+}
+
+#name {
+    transform: skew(1px, 2px);
+}
+
+/**----- PROJECTS -----**/
+
+.projectPage::before, .projectPage::after {
+    content: " ";
+    width: 100vw;
+    height: 9rem;
+    position: absolute;
+    background-color: var(--background);
+    z-index: 5;
+
+}
+
+.projectPage::before {  
+    top: -5rem;
+    transform: skewy(5deg);
+    box-shadow: 0 -11px 11px rgba(255, 255, 255, 0.25);
+}
+
+.projectPage::after {
+    bottom: -5rem;
+    transform: skewy(5deg);
+}
+
+.projectPage {
+    background-color: var(--background);
+}
+
+.projectCard {
+    color: black;
+    margin: 5% 0;
+    z-index: 15;
+}
 
 /**----- ABOUT -----**/
+
+.aboutPage {
+    padding-top: 7rem;
+    background-image: linear-gradient(to bottom,var(--cHeader), var(--cFooter));
+}
 
 .about {
     position: relative;
@@ -153,27 +208,6 @@ header button {
     border-radius: 25%;
     transition: border-radius .57s;
 }*/
-
-/**----- PROJECTS -----**/
-
-.projectCard {
-    color: black;
-    margin: 5% 0;
-}
-
-.resume {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-   
-}
-
-.resumeIMG {
-    width: 60vw;
-    height: 65vh;
-}
-
 
 /*****----- FOOTER -----******/
 

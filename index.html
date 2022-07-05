@@ -12,180 +12,153 @@
     </head>
 
     <body>   
-        <!-- Header -->
-        <header id="header">
-            <button class="navLink toPage" data-page="projectsPage" href="#">My Projects</button>
-            <button class="navbar-brand toPage" data-page="homePage" href="#"> <img id="headerLogo" src="images/JM-whtLogo.png" alt="Home" /> </button>
-            <button class="navLink toPage" data-page="aboutPage" href="#">About Me</button>
-        </header>
-
-        <!--************************ PAGES ******************************-->
-        <div id="pageWrapper">
-
-            <!--****** HOME PAGE ******-->
-            <div id="homePage" class="page pageContainer">
-                <p data-idx=0 data-flow="L" class="txt txtRear"> . </p>
-                <p data-idx=1 data-flow="R" class="txt txtFront"> . </p>
-                <p data-idx=2 data-flow="L" class="txt txtFront"> . </p>
-                <p data-idx=3 data-flow="R" class="txt txtRear"> . </p>
-                <p data-idx=4 data-flow="L" class="txt txtMid"> . </p>
-                <p data-idx=5 data-flow="R" class="txt txtMid"> . </p>
-                <p data-idx=6 data-flow="L" class="txt txtRear"> . </p>
-                <p data-idx=7 data-flow="R" class="txt txtMid"> . </p>
-                    
-                <figure class="text-center">
-                    <h1 id="name" class="display-1">Jospin Mihigo</h1>
-                    <p class="lead">Software Engineer building ...</p>
-                </figure>
+        <!--section id="sec0">
+            <div id="header">
+                <img id="headerLogo" src="images/JM-whtLogo.png"/>
+                Resume
             </div>
+        </section-->
 
-            <!--****** ABOUT PAGE ******-->
-            <div id="aboutPage" class="page pageContainer" style="display: none;">
-
-                <div class="pageIntro">
-                    <h5> 4th-year Software Engineer at <abbr title="Rochester Institute of Technology">RIT</abbr></h1>
-                    <p class="fw-lighter">building, learning, improving</p>
-                </div>
-
-                <div id="aboutAccordion" class="accordion accordion-flush">
-                    <!--About Me-->
-                    <div id="about0" class="about accordion-item">
-                        <h2 id="headingZero" class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                                <h4>Me</h4>  
-                            </button>
-                        </h2>
-                        <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#aboutAccordion">
-                            <div class="aboutContent accordion-body">
-                                <!--add avatar or actual pic?-->
-                                <p>
-                                    Software engineer, building what I can, how I can. <br>
-                                    Lifelong learner, learning what I can, to be the best I can. <br>
-                                    Human, improving where I can, when I can. <br>
-                                    <span class="aboutSoon small">Full description coming soon...</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--About car-->
-                    <div id="about1" class="about accordion-item">
-                        <h2 id="headingOne" class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h4>Cars</h4> 
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
-                            <div class="aboutContent accordion-body">
-                                <img class="aboutImage" src="images/e46.jpg" alt="BMW-E46-M3" />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit scelerisque in dictum non. Arcu ac tortor dignissim convallis. In hac habitasse platea dictumst quisque. Tellus elementum sagittis vitae et leo duis.
-                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--About stock-->
-                    <div id="about2" class="about accordion-item">
-                        <h2 id="headingTwo" class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                <h4>Markets</h4>  
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aboutAccordion">
-                            <div class="aboutContent accordion-body">
-                                <img class="aboutImage" src="images/stockMarket.jpg" alt="" />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sed pulvinar proin gravida. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Mus mauris vitae ultricies leo integer malesuada nunc.
-                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--About dog-->
-                    <div id="about3" class="about accordion-item">
-                        <h2 id="headerThree" class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                <h4>Lotus</h4>
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
-                            <div class="aboutContent accordion-body">
-                                <img class="aboutImage" src="images/otis.png" alt="" />
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh sed pulvinar proin gravida. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Mus mauris vitae ultricies leo integer malesuada nunc.
-                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--About art-->
-                    <div id="about4" class="about" style="display: none;">                    
-                        <h2 id="headerFour" class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                <h4>Art</h4>  
-                            </button>
-                        </h2>
-                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
-                            <div class="aboutContent accordion-body">
-                                <img class="aboutImage" src="images/otis.png" alt="" />
-                                <p>
-                                    ...
-                                    <br><span class="aboutSoon small">Actual description coming soon...</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--****** PROJECTS PAGE ******-->
-            <div id="projectsPage" class="page pageContainer" style="display: none;">
-                <div class="pageIntro">
-                    <h5> Fullstack Web Dev. / Software Engineer</h1>
-                    <p class="fw-lighter">Where problems meet solutions.</p>
-                </div>
-
-                <!--Project 1-->
-                <div class="projectCard row">
-                    <div class="col-sm-12">
-                        <div class="card text-center" style="width: 18rem; padding: 5px; box-shadow: -9px 15px 40px">
-                            <img src="images/JM-blkLogo.png" class="blur card-img-top">
-                            <div class="card-body">
-                              <h5 class="card-title">MentorMe</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a class="btn btn-primary disabled" role="button" aria-disabled="true">Coming Soon</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Project 2
-                    <div class="col-sm-6">
-                        <div class="card text-center" style="width: 18rem;">
-                            <img src="images/JM-blkLogo.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title"> _____ </h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                               <a class="btn btn-primary disabled" role="button" aria-disabled="true">View</a> 
-                            </div>
-                        </div>
-                    </div>
-                    -->
-                </div>
-
-                <figure class="text-center">
-                    <h4 class="display-4" style="margin-top: 5%; opacity: 15%; text-shadow: 1px 3px 12px white;">Full Page Coming Soon ...</h4>
-                </figure>
+        <!--****** HOME PAGE ******-->
+        <div class="page homePage">
                 
+            <div class="text-center banner glass">
+                <h1 id="name" class="display-1">Jospin Mihigo</h1>
+                <p class="lead">Software Engineer building ...</p>
             </div>
         </div>
-        <!--***************************************************************-->
+     
+        <!--****** PROJECTS PAGE ******-->
+        <div class="page projectPage" >
+            <p data-idx=0 data-flow="L" class="txt txtRear"> . </p>
+            <p data-idx=1 data-flow="R" class="txt txtFront"> . </p>
+            <p data-idx=2 data-flow="L" class="txt txtFront"> . </p>
+            <p data-idx=3 data-flow="R" class="txt txtRear"> . </p>
+            <p data-idx=4 data-flow="L" class="txt txtMid"> . </p>
+            <p data-idx=5 data-flow="R" class="txt txtMid"> . </p>
 
-         <!--****** FOOTER ******-->
-         <footer>
+            <h2 class="pageTitle display-2">Projects</h2>
+
+            <div class="projectCard row" style="margin-top: 2%;">
+                <div class="col-sm-4">
+                    <div class="card text-center" style="width: 15rem; padding: 5px; box-shadow: -9px 15px 40px">
+                        <img src="images/JM-blkLogo.png" class="blur card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"> Excel Data </h5>
+                        <p class="card-text" >
+                            Increased read, write, & aggregating capabilities of data with python tk gui interface.
+                        <!--a class="btn btn-primary disabled" role="button" aria-disabled="true">Coming Soon</!--a--> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card text-center" style="width: 15rem; padding: 5px; box-shadow: -9px 15px 40px">
+                        <img src="images/JM-blkLogo.png" class="blur card-img-top">
+                        <div class="card-body">
+                        <h5 class="card-title">MentorMe</h5>
+                        <p class="card-text">
+                            Forum for students to get all the campus assistance they need, anywhere, anytime.
+                        </p>
+                        <a class="btn btn-primary disabled" role="button" aria-disabled="true">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-sm-4">
+                    <div class="card text-center" style="width: 15rem; padding: 5px; box-shadow: -9px 15px 40px">
+                        <img src="images/JM-blkLogo.png" class="blur card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"> Soocial </h5>
+                        <p class="card-text" >
+                            Life keeps you busy, heres a reminder to check in on close friends & family once a while.
+                        </p>
+                        <!--a class="btn btn-primary disabled" role="button" aria-disabled="true">Coming Soon</!--a--> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <!--****** ABOUT PAGE ******-->
+        <div class="page aboutPage">
+            <h2 class="pageTitle display-2">About Me</h2>
+
+            <div id="aboutAccordion" class="accordion glass">
+                <!--About Me-->
+                <div id="about0" class="about accordion-item">
+                    <h2 id="headingZero" class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
+                            <h4>Me</h4>  
+                        </button>
+                    </h2>
+                    <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#aboutAccordion">
+                        <div class="aboutContent accordion-body">
+                            <!--add avatar or actual pic?-->
+                            <p>
+                                I enjoy a good challenge. Especially one with a solution many could benefit from. 
+                                <br><span class="aboutSoon small">Full description coming soon...</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--About Techs-->
+                <div id="about1" class="about accordion-item">
+                    <h2 id="headingOne" class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h4>Technologies</h4> 
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
+                        <div class="aboutContent accordion-body">
+                            <p>
+                                <span class="aboutSoon small">...</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--About Interests-->
+                <div id="about2" class="about accordion-item">
+                    <h2 id="headingTwo" class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <h4>Interests</h4>  
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aboutAccordion">
+                        <div class="aboutContent accordion-body">
+                            <p>
+                                <span class="aboutSoon small">...</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="pageTitle display-5"> Other Hobbies</h5>
+
+            <div class="infoBanner">
+                <h4>Cars</h4>
+                <p>
+                    Rather it's for cosmetics, performance, or maintenance, I've found a joy 
+                    in fixing and building out what I envision. One youtube video at a time.
+                </p>
+            </div>
+
+            <div class="infoBanner">
+                <h4> Training Lotus</h4>
+                <p>
+                    I've personally trained Lotus in the 7 common commands with the addition of 
+                    roll over, speak, bow, crawl, and backup.
+                </p>
+            </div>
+
+        </div>
+
+        <!--****** FOOTER ******-->
+        <footer>
             <h6 style="opacity: .30; margin-bottom: 0;">Get In Touch</h6>      
             <hr class="hl"></hr>
         
@@ -205,16 +178,16 @@
                         jm8084@rit.edu
                     </div>
                 </div>
-    
+
                 <div class="row justify-content-md-center" style="margin-right:3%">
-    
+
                     <div class="footerInfo col col-md-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin icon" viewBox="0 0 16 16">
                             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                         </svg>
                         <a href="https://www.linkedin.com/in/jospin-mihigo-944875145"> LinkedIn </a>
                     </div>
-    
+
                     <div class="footerInfo col col-md-auto">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-telephone icon" viewBox="0 0 16 16">
                             <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
@@ -224,9 +197,6 @@
                 </div>
             </div>
         </footer>
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
-
-
 </html>
