@@ -12,4 +12,5 @@
 - [ ] Update mobile responsivenss
 - [ ] Fill 'home::before' content
 - [ ] skew #name glass w/mouse
+- [ ] google fonts
 
