@@ -100,11 +100,11 @@ a {
     content: " ";
     color: white;
     width: 100vw;
-    height: 8rem;
+    height: 9rem;
     position: absolute;
     top: -4rem;
     right: 0;
-    transform: skewy(5deg);
+    transform: skewy(3deg);
     background-color: var(--background);
     box-shadow: 0 10px 11px rgba(255, 255, 255, 0.2);
     z-index: 5;
@@ -140,22 +140,21 @@ a {
 .projectPage::before, .projectPage::after {
     content: " ";
     width: 100vw;
-    height: 9rem;
+    height: 10rem;
     position: absolute;
     background-color: var(--background);
+    transform: skewy(3deg);
     z-index: 5;
 
 }
 
 .projectPage::before {  
     top: -5rem;
-    transform: skewy(5deg);
     box-shadow: 0 -11px 11px rgba(255, 255, 255, 0.25);
 }
 
 .projectPage::after {
     bottom: -5rem;
-    transform: skewy(5deg);
 }
 
 .projectPage {
