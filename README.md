@@ -2,15 +2,15 @@
     Where past, present, & future projects, big or small, can be displayed & organized.
     Alongside other hobbies I enjoy.
 
-## Features / Versions
+## Version / Features
 ### Current (v0.9) 
-    Unfinished functional release to get feedback & avoid unnecessary delay
+    Near complete early version 
 
 ### What's Next 
 - [ ] card modal view
-- [ ] Fill 'about' descriptons 
+- [x] Fill 'about' descriptons 
 - [ ] Update mobile responsivenss
 - [ ] Fill 'home::before' content
 - [ ] skew #name glass w/mouse
-- [ ] google fonts
+- [ ] fonts
 

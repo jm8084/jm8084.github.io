@@ -137,7 +137,7 @@ function aboutInfo(topic) {
 
 // global variables
 const techs = [
-    "CSS", "DJango", "Material-UI","PostgreSQL", "AWS",
+    "CSS", "DJango", "Material UI","PostgreSQL", "AWS",
     "git", "Python", "Javascript", "Java","Bootstrap",
     "React.js", "HTML", "MongoDB"
 ];

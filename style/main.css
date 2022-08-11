@@ -198,6 +198,23 @@ a {
     margin-bottom: 1%;
 }
 
+.abtList {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+}
+
+.abtItem {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+
+.abtItem dd {
+    margin: 0 0;
+}
+
 .aboutSoon {
     color: lightsteelblue;
     font-weight: 500;
